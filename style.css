@@ -1,0 +1,32 @@
+.card-body {
+    height: auto;
+    width: auto;
+    background-color: white;
+    padding: none;
+    align-content: center;
+}
+
+.card-title {
+    color: white;
+    text-align: center;
+    text-shadow: black;
+}
+
+.card-text {
+    color: rgb(48, 46, 46);
+    text-align: center;
+}
+
+.badge:hover {
+    color: rgb(215, 250, 238);
+    width: 50px;
+}
+
+.col-md-3 {
+    background-color: white;
+    padding-left: 20px;
+}
+
+.badge {
+    align-self: center;
+}
