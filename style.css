@@ -5,12 +5,21 @@
     justify-content: center;
 }
 
+#title-card {
+    border: solid 3px rgb(110, 110, 110);
+}
+
+.col {
+    border: solid 3px rgb(110, 110, 110);
+}
+
 .card-body {
     height: auto;
     width: auto;
     background-color: white;
     padding: none;
     align-content: center;
+    border: white;
 }
 
 .card-title {
@@ -24,19 +33,23 @@
     text-align: center;
 }
 
-.badge:hover {
-    color: rgb(215, 250, 238);
-    width: 50px;
+#timer {
+    width: 30%;
 }
 
-.col-md-3 {
-    background-color: white;
-    padding-left: 20px;
+#question {
+    width: 40%;
 }
 
-.badge {
-    align-self: center;
+#current-score {
+    font-size: 60px;
 }
+
+#seconds {
+    font-size: 60px;
+}
+
+
 
 
 /* STYLING FOR TIMER 

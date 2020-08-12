@@ -3,6 +3,14 @@
 // Timer
     // create timer
 
+    var timeCurrent = 60;
+    
+    var timeElapse = 1000;
+
+    var timeRemain = timeCurrent - timeElapse;
+
+
+
     // time decreases with wrong answer
 
     // reaches zero, game over

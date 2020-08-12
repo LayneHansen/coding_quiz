@@ -16,65 +16,79 @@
         
       <div class="row">
       
-        <div class="card col-md-12">
+        <div class="card col-md-12" id="title-card">
             
           <div class="card-body bg-info">
               <h1 class="card-title">DO YOU EVEN CODE, BRO?!?</h1>
               <h4 class="card-text">Test your Javascript knowledge, right here, right meow!</h4>
-            </div>
-        </div>
-      </div>
-
-      <div class="row">
-
-        <div class="col-md-3">
-
-          <div class="timer">
-            <div id="hand"></div>
-            <div class="controls">
-              <label class="switch" for="status-toggle">
-                <input checked type="checkbox" name="status-toggle" id="status-toggle" />
-                <span class="slider"></span>
-              </label>
-              <div class="time">
-                <div id="seconds">60</div>
-              </div>
-              <div class="buttons">
-                <button aria-label="play" id="play">
-                  <i class="fa fa-play" aria-hidden="true"></i>
-                </button>
-                <button aria-label="pause" id="pause">
-                  <i class="fa fa-pause" aria-hidden="true"></i>
-                </button>
-                <button aria-label="stop" id="stop">
-                  <i class="fa fa-stop" aria-hidden="true"></i>
-                </button>
-              </div>
-            </div>
           </div>
-
-        </div>
-
-          <div class="col-md-6 card-body">
-            
-            <h4>The 'for' command is used to do what?</h4>
-            <br>
-            <a class="badge badge-pill badge-info">create a loop</a>
-            <br>
-            <a class="badge badge-pill badge-info">call a function</a>
-            <br>
-            <a class="badge badge-pill badge-info">create a variable</a>
-            <br>
-            <a class="badge badge-pill badge-info">close a loop</a>
         
-          </div>
-
-          <div class=col-md-3></div>
-
         </div>
-      
+
       </div>
-    
+      
+      <div class="row">
+      
+          <div class="col">
+
+            <div class="card">
+              <div class="card-body text-center">
+                <h5 class="card-text">Time Remaining</h5>
+	                  <div class="time">
+	                    <div id="seconds">60</div>
+	                  </div>
+              </div>
+            </div>
+
+          </div>
+          
+          <div class="col">
+
+            <div class="card" id="question-one">
+              <div class="card-body text-center">
+                <h6>The 'for' command is used to do what?</h6>
+                  <a class="badge badge-pill badge-info">create a loop</a>
+                  <br>
+                  <a class="badge badge-pill badge-info">call a function</a>
+                  <br>
+                  <a class="badge badge-pill badge-info">create a variable</a>
+                  <br>
+                  <a class="badge badge-pill badge-info">close a loop</a>
+              </div>
+            </div>
+            
+            <div class="card bg-info" id="question-two" hidden>
+              <div class="card-body text-center">
+                <h6>What is the main purpose of Javascript?</h6>
+                  <a class="badge badge-pill badge-info">place text on the page</a>
+                  <br>
+                  <a class="badge badge-pill badge-info">make stuff pretty</a>
+                  <br>
+                  <a class="badge badge-pill badge-info">functionality</a>
+                  <br>
+                  <a class="badge badge-pill badge-info">animation</a>
+              </div>
+            </div>
+
+          </div>
+          
+          <div class="col">
+
+            <div class="card">
+              <div class="card-body text-center">
+                <h5 class="card-text">SCORE</h5>
+                  <div class="score">
+                    <div id="current-score">0</div>
+                  </div>
+              </div>
+            </div>
+
+          </div>
+      
+      
+      </div>      
+            
+          
     </div>
 
 
