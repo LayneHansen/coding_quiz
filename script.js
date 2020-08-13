@@ -1,11 +1,11 @@
 
 $(document).ready(function () {
 
-    $('div#question-one,#question-two').hide();
+    $('div#q1,#q2,#q3').hide();
 
     let score = 0;
 
-
+    $('#question-one')
 
 
     // TIMER
@@ -13,7 +13,7 @@ $(document).ready(function () {
     // var startTime = document.getElementById('#start-button');
     var secondsDisplay = document.querySelector("#seconds");
 
-    var secondsRemain = 110;
+    var secondsRemain = 60;
 
     var start = document.querySelector("#start-button");
 
