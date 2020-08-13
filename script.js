@@ -1,26 +1,37 @@
-// Global Variables
 
-var startTime = document.getElementById('#start-button');
+$(document).ready(function () {
 
-var timeDisplay = document.getElementById('#seconds');
+    $('div#question-one,#question-two').hide();
 
-var secondsTotal = 60;
+    let score = 0;
 
-var secondsElapse = 0;
 
-var timeInterval;
 
-function displayTime () {
+
+    // TIMER
+
+    // var startTime = document.getElementById('#start-button');
+    var secondsDisplay = document.querySelector("#seconds");
+
+    var secondsRemain = 110;
+
+    var start = document.querySelector("#start-button");
+
+    start.addEventListener("click", function () {
+        var secondsInterval = setInterval(function () {
+            secondsRemain--;
+            secondsDisplay.innerText = secondsRemain;
+
+            if (secondsRemain === 0) {
+                clearInterval(secondsInterval);
+            }
+
+        }, 1000);
+
+
+    });
 
 }
-
-
-
-startButton.addEventListener('click', timeCountdown());
-
-const timeRemain = document.getElementById()
-
-
 
     // time decreases with wrong answer
 
