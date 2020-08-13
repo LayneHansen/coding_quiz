@@ -1,13 +1,24 @@
-// Start Button
+// Global Variables
 
-// Timer
-    // create timer
+var startTime = document.getElementById('#start-button');
 
-    var timeCurrent = 60;
-    
-    var timeElapse = 1000;
+var timeDisplay = document.getElementById('#seconds');
 
-    var timeRemain = timeCurrent - timeElapse;
+var secondsTotal = 60;
+
+var secondsElapse = 0;
+
+var timeInterval;
+
+function displayTime () {
+
+}
+
+
+
+startButton.addEventListener('click', timeCountdown());
+
+const timeRemain = document.getElementById()
 
 
 
