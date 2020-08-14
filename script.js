@@ -1,11 +1,11 @@
 
-$(document).ready(function () {
 
-    $('div#q1,#q2,#q3').hide();
 
-    let score = 0;
+    // var questions =
 
-    $('#question-one')
+    // var score = 0;
+
+ 
 
 
     // TIMER
@@ -21,17 +21,31 @@ $(document).ready(function () {
         var secondsInterval = setInterval(function () {
             secondsRemain--;
             secondsDisplay.innerText = secondsRemain;
-
+            
             if (secondsRemain === 0) {
                 clearInterval(secondsInterval);
             }
 
+            
         }, 1000);
+        
+        removeElement (start);
+        
+        var questionOne = document.getElementById("q1");
+        showElement (questionOne);
 
 
     });
 
-}
+    function removeElement (elementToRemove) {
+        elementToRemove.style.display = 'none';
+
+    }
+
+    function showElement (elementToShow) {
+        elementToShow.style.display = 'block';
+    }
+
 
     // time decreases with wrong answer
 
@@ -41,7 +55,15 @@ $(document).ready(function () {
 
 // Answer question with click
 
-    // switches to new question
+    // function selectAnswer {
+
+    // }
+
+    // // switches to new question
+
+    // function nextQuestion() {
+
+    // }
 
 // Game Over! icon
 
