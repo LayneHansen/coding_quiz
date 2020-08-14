@@ -1,144 +1,228 @@
 
 
+// TIMER
 
-    // var questions =
+var secondsDisplay = document.querySelector("#seconds");
+var secondsRemain = 60;
 
-    // var score = 0;
+// SCORECARD
 
- 
+var scoreCard = document.querySelector("#current-score")
+console.log(scoreCard);
+var scoreCurrent = 0;
 
 
-    // TIMER
+// MIDDLE DISPLAY CARDS
 
-    var secondsDisplay = document.querySelector("#seconds");
+var start = document.querySelector("#start-button");
+var questionOne = document.getElementById("q1");
+var questionTwo = document.getElementById("q2");
+var questionThree = document.getElementById("q3");
+var questionFour = document.getElementById("q4");
+var questionFive = document.getElementById("q5");
+var questionSix = document.getElementById("q6");
+var questionSeven = document.getElementById("q7");
+var questionEight = document.getElementById("q8");
+var questionNine = document.getElementById("q9");
+var questionTen = document.getElementById("q10");
+var gameOverCard = document.getElementById("game-over");
 
-    var secondsRemain = 60;
+// var wrongAnswer = document.querySelector(".wrong");
 
-    var start = document.querySelector("#start-button");
-    var questionOne = document.getElementById("q1");
-    var questionTwo = document.getElementById("q2");
-    var questionThree = document.getElementById("q3");
-    var questionFour = document.getElementById("q4");
-    var questionFive = document.getElementById("q5");
-    var questionSix = document.getElementById("q6");
-    var questionSeven = document.getElementById("q7");
-    var questionEight = document.getElementById("q8");
-    var questionNine = document.getElementById("q9");
-    var questionTen = document.getElementById("q10");
-    
+// wrongAnswer.addEventListener("click", function () {
 
-    /* START BUTTON FUNCTION
-        1. Push Button
-        2. Button Disappears
-        3. Timer Starts
-        4. First question appears
-    */
 
-    start.addEventListener("click", function () {
-        var secondsInterval = setInterval(function () {
-            secondsRemain--;
-            secondsDisplay.innerText = secondsRemain;
-            
-            if (secondsRemain === 0) {
-                clearInterval(secondsInterval);
-            }
 
-            
-        }, 1000);
-        
-        removeElement (start);
-        showElement (questionOne);
+// })
 
-    });
 
-    // Event of answering questions
+/* START BUTTON FUNCTION
+    1. Push Button
+    2. Button Disappears
+    3. Timer Starts
+    4. First question appears
+*/
 
-    // Question 1
+var secondsInterval; 
 
-        var quest1 = document.querySelector('.q1-correct');
-        quest1.addEventListener('click', function() {
-            removeElement(questionOne);
-            showElement(questionTwo);
-        })
+start.addEventListener("click", function () {
+        secondsInterval = setInterval(function () {
+        secondsRemain--;
+        secondsDisplay.innerText = secondsRemain;
 
-    // Question 2
+        if (secondsRemain === 0) {
+            endGame();
+        }
 
-        var quest2 = document.querySelector('.q2-correct');
-        quest2.addEventListener('click', function() {
-            console.log(quest2);
-            removeElement(questionTwo);
-            showElement(questionThree);
-            console.log(questionThree);
 
-        })
+    }, 1000);
 
-    // Question 3
-    
-        var quest3 = document.querySelector('.q3-correct');
-        quest3.addEventListener('click', function() {
-            removeElement(questionThree);
-            showElement(questionFour);
+    removeElement(start);
+    showElement(questionOne);
 
-        })
+});
 
-    // Question 4
+// Event of answering questions
 
-        var quest4 = document.querySelector('.q4-correct');
-        quest4.addEventListener('click', function() {
-            removeElement(questionFour);
-            showElement(questionFive);
-    
-    // Question 5
+// Question 1
 
-        var quest5 = document.querySelector('.q5-correct');
-        quest5.addEventListener('click', function() {
-            removeElement(questionFive);
-            showElement(questionSix);
+var quest1 = document.querySelector('.q1-correct');
+quest1.addEventListener('click', function () {
+    scoreCurrent = scoreCurrent + 1;
+    scoreCard.innerText = scoreCurrent;
+    removeElement(questionOne);
+    showElement(questionTwo);
 
-    // Question 6
+})
 
-        var quest6 = document.querySelector('.q6-correct');
-        quest6.addEventListener('click', function() {
-            removeElement(questionSix);
-            showElement(questionSeven);
+var wrongAnswers = document.querySelectorAll('.wrong-q1');
 
-    // Question 7
+for (var i = 0; i < wrongAnswers.length; i++) {
+    var currentEl = wrongAnswers[i];
 
-        var quest7 = document.querySelector('.q7-correct');
-        quest7.addEventListener('click', function() {
-            removeElement(questionSeven);
-            showElement(questionEight);
+    currentEl.addEventListener("click", function () {
+        console.log("wrong");
+        decreaseTime();
+        removeElement(questionOne);
+        showElement(questionTwo);
+    })
+}
 
-    // Question 8
+// Question 2
 
-        var quest8 = document.querySelector('.q8-correct');
-        quest8.addEventListener('click', function() {
-            removeElement(questionEight);
-            showElement(questionNine);
+var quest2 = document.querySelector('.q2-correct');
+quest2.addEventListener('click', function () {
+    scoreCurrent = scoreCurrent + 1;
+    scoreCard.innerText = scoreCurrent;
+    removeElement(questionTwo);
+    showElement(questionThree);
 
-    // Question 9
+})
 
-        var quest9 = document.querySelector('.q9-correct');
-        quest9.addEventListener('click', function() {
-            removeElement(questionNine);
-            showElement(questionTen);
+// Question 3
 
-    // Question 10
+var quest3 = document.querySelector('.q3-correct');
+quest3.addEventListener('click', function () {
+    scoreCurrent = scoreCurrent + 1;
+    scoreCard.innerText = scoreCurrent;
+    removeElement(questionThree);
+    showElement(questionFour);
 
-        var quest10 = document.querySelector('.q10-correct');
-        quest10.addEventListener('click', function() {
-            removeElement(questionTen);
-            showElement(questionThree);
+})
 
-    
-    
-    function removeElement (elementToRemove) {
-        elementToRemove.style.display = 'none';
-    }
+// Question 4
 
-    function showElement (elementToShow) {
-        elementToShow.style.display = 'block';
-    }
+var quest4 = document.querySelector('.q4-correct');
+quest4.addEventListener('click', function () {
+    scoreCurrent = scoreCurrent + 1;
+    scoreCard.innerText = scoreCurrent;
+    removeElement(questionFour);
+    showElement(questionFive);
+
+})
+
+// Question 5
+
+var quest5 = document.querySelector('.q5-correct');
+quest5.addEventListener('click', function () {
+    scoreCurrent = scoreCurrent + 1;
+    scoreCard.innerText = scoreCurrent;
+    removeElement(questionFive);
+    showElement(questionSix);
+
+})
+
+// Question 6
+
+var quest6 = document.querySelector('.q6-correct');
+quest6.addEventListener('click', function () {
+    scoreCurrent = scoreCurrent + 1;
+    scoreCard.innerText = scoreCurrent;
+    removeElement(questionSix);
+    showElement(questionSeven);
+
+})
+
+// Question 7
+
+var quest7 = document.querySelector('.q7-correct');
+quest7.addEventListener('click', function () {
+    scoreCurrent = scoreCurrent + 1;
+    scoreCard.innerText = scoreCurrent;
+    removeElement(questionSeven);
+    showElement(questionEight);
+
+})
+
+// Question 8
+
+var quest8 = document.querySelector('.q8-correct');
+quest8.addEventListener('click', function () {
+    scoreCurrent = scoreCurrent + 1;
+    scoreCard.innerText = scoreCurrent;
+    removeElement(questionEight);
+    showElement(questionNine);
+
+})
+
+// Question 9
+
+var quest9 = document.querySelector('.q9-correct');
+quest9.addEventListener('click', function () {
+    scoreCurrent = scoreCurrent + 1;
+    scoreCard.innerText = scoreCurrent;
+    removeElement(questionNine);
+    showElement(questionTen);
+
+})
+
+
+// Question 10
+
+var quest10 = document.querySelector('.q10-correct');
+quest10.addEventListener('click', function () {
+    scoreCurrent = scoreCurrent + 1;
+    scoreCard.innerText = scoreCurrent;
+    removeElement(questionTen);
+    showElement(gameOverCard);
+    endGame();
+
+})
+
+// Game Over Card
+
+var gameOver = document.querySelector('#game-over');
+    gameOver.addEventListener('click', function () {
+    // reset clock and score
+
+})
+
+
+
+
+function removeElement(elementToRemove) {
+    elementToRemove.style.display = 'none';
+}
+
+function showElement(elementToShow) {
+    elementToShow.style.display = 'block';
+}
+
+function decreaseTime() {
+    secondsRemain = secondsRemain -5;
+
+}
+
+function endGame() {
+    clearInterval(secondsInterval);
+
+    // local storage
+    localStorage.setItem("High Score", scoreCurrent);
+
+    // print high score
+    // user enter initials
+
+}
 
 
 

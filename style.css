@@ -3,6 +3,7 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;
+  margin-top: 25%;
 
 }
 
@@ -56,6 +57,11 @@ body {
     justify-content: center;
     
 }
+
+/* #game-over-button {
+    align-items: center;
+    justify-content: center;
+} */
 
 
 
