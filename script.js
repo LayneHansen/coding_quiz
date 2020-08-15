@@ -25,7 +25,7 @@ var questionSeven = document.getElementById("q7");
 var questionEight = document.getElementById("q8");
 var questionNine = document.getElementById("q9");
 var questionTen = document.getElementById("q10");
-var gameOverCard = document.getElementById("game-over");
+var gameOverCard = document.querySelector("#game-over");
 
 // var wrongAnswer = document.querySelector(".wrong");
 
@@ -81,7 +81,6 @@ for (var i = 0; i < wrongAnswers.length; i++) {
     var currentEl = wrongAnswers[i];
 
     currentEl.addEventListener("click", function () {
-        console.log("wrong");
         scoreCurrent = scoreCurrent - 1;
         scoreCard.innerText = scoreCurrent;
         decreaseTime();
@@ -107,7 +106,6 @@ for (var i = 0; i < wrongAnswers.length; i++) {
     var currentEl = wrongAnswers[i];
 
     currentEl.addEventListener("click", function () {
-        console.log("wrong");
         scoreCurrent = scoreCurrent - 1;
         scoreCard.innerText = scoreCurrent;
         decreaseTime();
@@ -133,7 +131,6 @@ for (var i = 0; i < wrongAnswers.length; i++) {
     var currentEl = wrongAnswers[i];
 
     currentEl.addEventListener("click", function () {
-        console.log("wrong");
         scoreCurrent = scoreCurrent - 1;
         scoreCard.innerText = scoreCurrent;
         decreaseTime();
@@ -159,7 +156,6 @@ for (var i = 0; i < wrongAnswers.length; i++) {
     var currentEl = wrongAnswers[i];
 
     currentEl.addEventListener("click", function () {
-        console.log("wrong");
         scoreCurrent = scoreCurrent - 1;
         scoreCard.innerText = scoreCurrent;
         decreaseTime();
@@ -185,7 +181,6 @@ for (var i = 0; i < wrongAnswers.length; i++) {
     var currentEl = wrongAnswers[i];
 
     currentEl.addEventListener("click", function () {
-        console.log("wrong");
         scoreCurrent = scoreCurrent - 1;
         scoreCard.innerText = scoreCurrent;
         decreaseTime();
@@ -211,7 +206,6 @@ for (var i = 0; i < wrongAnswers.length; i++) {
     var currentEl = wrongAnswers[i];
 
     currentEl.addEventListener("click", function () {
-        console.log("wrong");
         scoreCurrent = scoreCurrent - 1;
         scoreCard.innerText = scoreCurrent;
         decreaseTime();
@@ -236,7 +230,6 @@ for (var i = 0; i < wrongAnswers.length; i++) {
     var currentEl = wrongAnswers[i];
 
     currentEl.addEventListener("click", function () {
-        console.log("wrong");
         scoreCurrent = scoreCurrent - 1;
         scoreCard.innerText = scoreCurrent;
         decreaseTime();
@@ -261,7 +254,6 @@ for (var i = 0; i < wrongAnswers.length; i++) {
     var currentEl = wrongAnswers[i];
 
     currentEl.addEventListener("click", function () {
-        console.log("wrong");
         scoreCurrent = scoreCurrent - 1;
         scoreCard.innerText = scoreCurrent;
         decreaseTime();
@@ -287,7 +279,6 @@ for (var i = 0; i < wrongAnswers.length; i++) {
     var currentEl = wrongAnswers[i];
 
     currentEl.addEventListener("click", function () {
-        console.log("wrong");
         scoreCurrent = scoreCurrent - 1;
         scoreCard.innerText = scoreCurrent;
         decreaseTime();
@@ -315,7 +306,6 @@ for (var i = 0; i < wrongAnswers.length; i++) {
     var currentEl = wrongAnswers[i];
 
     currentEl.addEventListener("click", function () {
-        console.log("wrong");
         scoreCurrent = scoreCurrent - 1;
         scoreCard.innerText = scoreCurrent;
         decreaseTime();
@@ -352,8 +342,15 @@ function decreaseTime() {
 function endGame() {
     clearInterval(secondsInterval);
 
+    if (secondsRemain === 0) {
+        removeElement();
+        showElement(gameOverCard);
+    }
+
     // local storage
     localStorage.setItem("High Score", scoreCurrent);
+    highScore = localStorage.getItem("High Score", scoreCurrent);
+    
 
     // print high score
     // user enter initials
