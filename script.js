@@ -7,9 +7,13 @@ var secondsRemain = 60;
 
 // SCORECARD
 
-var scoreCard = document.querySelector("#current-score")
+var scoreCard = document.querySelector("#current-score");
 console.log(scoreCard);
+
 var scoreCurrent = 0;
+
+var highScore = document.querySelector(".high-score-card");
+
 
 
 // MIDDLE DISPLAY CARDS
@@ -336,8 +340,8 @@ function showElement(elementToShow) {
 
 function decreaseTime() {
     secondsRemain = secondsRemain -5;
-
 }
+
 
 function endGame() {
     clearInterval(secondsInterval);
@@ -349,17 +353,17 @@ function endGame() {
 
     // local storage
     
-    var highScore = document.querySelector('#high-score');
-    var highScore = localStorage.getItem("High Score", scoreCurrent); 
+    let highScore = localStorage.getItem('highscore');
+    console.log(highScore);
 
-    if (scoreCurrent >= highScore) {
-        localStorage.setItem("High Score", scoreCurrent);
-        scoreCurrent.innerText = highScore;
+    if (scoreCurrent > highScore) {
+        localStorage.setItem("highscore", scoreCurrent);
 
-    }
-
-
+    } // else if (!highScore) localStorage.setItem("highscore", scoreCurrent);
     
+    var localHighScore = localStorage.getItem('highscore')
+    console.log("Is there anybody out there?", localHighScore);
+    highScore.innerText = localHighScore;
 
     // print high score
     // user enter initials
