@@ -82,6 +82,8 @@ for (var i = 0; i < wrongAnswers.length; i++) {
 
     currentEl.addEventListener("click", function () {
         console.log("wrong");
+        scoreCurrent = scoreCurrent - 1;
+        scoreCard.innerText = scoreCurrent;
         decreaseTime();
         removeElement(questionOne);
         showElement(questionTwo);
@@ -99,16 +101,18 @@ quest2.addEventListener('click', function () {
 
 })
 
-var wrongAnswers = document.querySelectorAll('.wrong-q1');
+var wrongAnswers = document.querySelectorAll('.wrong-q2');
 
 for (var i = 0; i < wrongAnswers.length; i++) {
     var currentEl = wrongAnswers[i];
 
     currentEl.addEventListener("click", function () {
         console.log("wrong");
+        scoreCurrent = scoreCurrent - 1;
+        scoreCard.innerText = scoreCurrent;
         decreaseTime();
-        removeElement(questionOne);
-        showElement(questionTwo);
+        removeElement(questionTwo);
+        showElement(questionThree);
     })
 }
 
@@ -123,16 +127,18 @@ quest3.addEventListener('click', function () {
 
 })
 
-var wrongAnswers = document.querySelectorAll('.wrong-q1');
+var wrongAnswers = document.querySelectorAll('.wrong-q3');
 
 for (var i = 0; i < wrongAnswers.length; i++) {
     var currentEl = wrongAnswers[i];
 
     currentEl.addEventListener("click", function () {
         console.log("wrong");
+        scoreCurrent = scoreCurrent - 1;
+        scoreCard.innerText = scoreCurrent;
         decreaseTime();
-        removeElement(questionOne);
-        showElement(questionTwo);
+        removeElement(questionThree);
+        showElement(questionFour);
     })
 }
 
@@ -147,16 +153,18 @@ quest4.addEventListener('click', function () {
 
 })
 
-var wrongAnswers = document.querySelectorAll('.wrong-q1');
+var wrongAnswers = document.querySelectorAll('.wrong-q4');
 
 for (var i = 0; i < wrongAnswers.length; i++) {
     var currentEl = wrongAnswers[i];
 
     currentEl.addEventListener("click", function () {
         console.log("wrong");
+        scoreCurrent = scoreCurrent - 1;
+        scoreCard.innerText = scoreCurrent;
         decreaseTime();
-        removeElement(questionOne);
-        showElement(questionTwo);
+        removeElement(questionFour);
+        showElement(questionFive);
     })
 }
 
@@ -171,16 +179,18 @@ quest5.addEventListener('click', function () {
 
 })
 
-var wrongAnswers = document.querySelectorAll('.wrong-q1');
+var wrongAnswers = document.querySelectorAll('.wrong-q5');
 
 for (var i = 0; i < wrongAnswers.length; i++) {
     var currentEl = wrongAnswers[i];
 
     currentEl.addEventListener("click", function () {
         console.log("wrong");
+        scoreCurrent = scoreCurrent - 1;
+        scoreCard.innerText = scoreCurrent;
         decreaseTime();
-        removeElement(questionOne);
-        showElement(questionTwo);
+        removeElement(questionFive);
+        showElement(questionSix);
     })
 }
 
@@ -195,16 +205,18 @@ quest6.addEventListener('click', function () {
 
 })
 
-var wrongAnswers = document.querySelectorAll('.wrong-q1');
+var wrongAnswers = document.querySelectorAll('.wrong-q6');
 
 for (var i = 0; i < wrongAnswers.length; i++) {
     var currentEl = wrongAnswers[i];
 
     currentEl.addEventListener("click", function () {
         console.log("wrong");
+        scoreCurrent = scoreCurrent - 1;
+        scoreCard.innerText = scoreCurrent;
         decreaseTime();
-        removeElement(questionOne);
-        showElement(questionTwo);
+        removeElement(questionSix);
+        showElement(questionSeven);
     })
 }
 
@@ -218,16 +230,18 @@ quest7.addEventListener('click', function () {
     showElement(questionEight);
 
 })
-var wrongAnswers = document.querySelectorAll('.wrong-q1');
+var wrongAnswers = document.querySelectorAll('.wrong-q7');
 
 for (var i = 0; i < wrongAnswers.length; i++) {
     var currentEl = wrongAnswers[i];
 
     currentEl.addEventListener("click", function () {
         console.log("wrong");
+        scoreCurrent = scoreCurrent - 1;
+        scoreCard.innerText = scoreCurrent;
         decreaseTime();
-        removeElement(questionOne);
-        showElement(questionTwo);
+        removeElement(questionSeven);
+        showElement(questionEight);
     })
 }
 
@@ -241,16 +255,18 @@ quest8.addEventListener('click', function () {
     showElement(questionNine);
 
 })
-var wrongAnswers = document.querySelectorAll('.wrong-q1');
+var wrongAnswers = document.querySelectorAll('.wrong-q8');
 
 for (var i = 0; i < wrongAnswers.length; i++) {
     var currentEl = wrongAnswers[i];
 
     currentEl.addEventListener("click", function () {
         console.log("wrong");
+        scoreCurrent = scoreCurrent - 1;
+        scoreCard.innerText = scoreCurrent;
         decreaseTime();
-        removeElement(questionOne);
-        showElement(questionTwo);
+        removeElement(questionEight);
+        showElement(questionNine);
     })
 }
 
@@ -265,16 +281,18 @@ quest9.addEventListener('click', function () {
 
 })
 
-var wrongAnswers = document.querySelectorAll('.wrong-q1');
+var wrongAnswers = document.querySelectorAll('.wrong-q9');
 
 for (var i = 0; i < wrongAnswers.length; i++) {
     var currentEl = wrongAnswers[i];
 
     currentEl.addEventListener("click", function () {
         console.log("wrong");
+        scoreCurrent = scoreCurrent - 1;
+        scoreCard.innerText = scoreCurrent;
         decreaseTime();
-        removeElement(questionOne);
-        showElement(questionTwo);
+        removeElement(questionNine);
+        showElement(questionTen);
     })
 }
 
@@ -291,16 +309,19 @@ quest10.addEventListener('click', function () {
 
 })
 
-var wrongAnswers = document.querySelectorAll('.wrong-q1');
+var wrongAnswers = document.querySelectorAll('.wrong-q10');
 
 for (var i = 0; i < wrongAnswers.length; i++) {
     var currentEl = wrongAnswers[i];
 
     currentEl.addEventListener("click", function () {
         console.log("wrong");
+        scoreCurrent = scoreCurrent - 1;
+        scoreCard.innerText = scoreCurrent;
         decreaseTime();
-        removeElement(questionOne);
-        showElement(questionTwo);
+        removeElement(questionTen);
+        showElement(gameOverCard);
+        endGame();
     })
 }
 
