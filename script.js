@@ -99,6 +99,19 @@ quest2.addEventListener('click', function () {
 
 })
 
+var wrongAnswers = document.querySelectorAll('.wrong-q1');
+
+for (var i = 0; i < wrongAnswers.length; i++) {
+    var currentEl = wrongAnswers[i];
+
+    currentEl.addEventListener("click", function () {
+        console.log("wrong");
+        decreaseTime();
+        removeElement(questionOne);
+        showElement(questionTwo);
+    })
+}
+
 // Question 3
 
 var quest3 = document.querySelector('.q3-correct');
@@ -109,6 +122,19 @@ quest3.addEventListener('click', function () {
     showElement(questionFour);
 
 })
+
+var wrongAnswers = document.querySelectorAll('.wrong-q1');
+
+for (var i = 0; i < wrongAnswers.length; i++) {
+    var currentEl = wrongAnswers[i];
+
+    currentEl.addEventListener("click", function () {
+        console.log("wrong");
+        decreaseTime();
+        removeElement(questionOne);
+        showElement(questionTwo);
+    })
+}
 
 // Question 4
 
@@ -121,6 +147,19 @@ quest4.addEventListener('click', function () {
 
 })
 
+var wrongAnswers = document.querySelectorAll('.wrong-q1');
+
+for (var i = 0; i < wrongAnswers.length; i++) {
+    var currentEl = wrongAnswers[i];
+
+    currentEl.addEventListener("click", function () {
+        console.log("wrong");
+        decreaseTime();
+        removeElement(questionOne);
+        showElement(questionTwo);
+    })
+}
+
 // Question 5
 
 var quest5 = document.querySelector('.q5-correct');
@@ -131,6 +170,19 @@ quest5.addEventListener('click', function () {
     showElement(questionSix);
 
 })
+
+var wrongAnswers = document.querySelectorAll('.wrong-q1');
+
+for (var i = 0; i < wrongAnswers.length; i++) {
+    var currentEl = wrongAnswers[i];
+
+    currentEl.addEventListener("click", function () {
+        console.log("wrong");
+        decreaseTime();
+        removeElement(questionOne);
+        showElement(questionTwo);
+    })
+}
 
 // Question 6
 
@@ -143,6 +195,19 @@ quest6.addEventListener('click', function () {
 
 })
 
+var wrongAnswers = document.querySelectorAll('.wrong-q1');
+
+for (var i = 0; i < wrongAnswers.length; i++) {
+    var currentEl = wrongAnswers[i];
+
+    currentEl.addEventListener("click", function () {
+        console.log("wrong");
+        decreaseTime();
+        removeElement(questionOne);
+        showElement(questionTwo);
+    })
+}
+
 // Question 7
 
 var quest7 = document.querySelector('.q7-correct');
@@ -153,6 +218,18 @@ quest7.addEventListener('click', function () {
     showElement(questionEight);
 
 })
+var wrongAnswers = document.querySelectorAll('.wrong-q1');
+
+for (var i = 0; i < wrongAnswers.length; i++) {
+    var currentEl = wrongAnswers[i];
+
+    currentEl.addEventListener("click", function () {
+        console.log("wrong");
+        decreaseTime();
+        removeElement(questionOne);
+        showElement(questionTwo);
+    })
+}
 
 // Question 8
 
@@ -164,6 +241,18 @@ quest8.addEventListener('click', function () {
     showElement(questionNine);
 
 })
+var wrongAnswers = document.querySelectorAll('.wrong-q1');
+
+for (var i = 0; i < wrongAnswers.length; i++) {
+    var currentEl = wrongAnswers[i];
+
+    currentEl.addEventListener("click", function () {
+        console.log("wrong");
+        decreaseTime();
+        removeElement(questionOne);
+        showElement(questionTwo);
+    })
+}
 
 // Question 9
 
@@ -175,6 +264,19 @@ quest9.addEventListener('click', function () {
     showElement(questionTen);
 
 })
+
+var wrongAnswers = document.querySelectorAll('.wrong-q1');
+
+for (var i = 0; i < wrongAnswers.length; i++) {
+    var currentEl = wrongAnswers[i];
+
+    currentEl.addEventListener("click", function () {
+        console.log("wrong");
+        decreaseTime();
+        removeElement(questionOne);
+        showElement(questionTwo);
+    })
+}
 
 
 // Question 10
@@ -188,6 +290,19 @@ quest10.addEventListener('click', function () {
     endGame();
 
 })
+
+var wrongAnswers = document.querySelectorAll('.wrong-q1');
+
+for (var i = 0; i < wrongAnswers.length; i++) {
+    var currentEl = wrongAnswers[i];
+
+    currentEl.addEventListener("click", function () {
+        console.log("wrong");
+        decreaseTime();
+        removeElement(questionOne);
+        showElement(questionTwo);
+    })
+}
 
 // Game Over Card
 
