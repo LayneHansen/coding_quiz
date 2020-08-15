@@ -59,7 +59,7 @@ start.addEventListener("click", function () {
 
     removeElement(start);
     showElement(questionOne);
-
+    // endGame ();  // test code remove this***
 });
 
 // Event of answering questions
@@ -348,8 +348,17 @@ function endGame() {
     }
 
     // local storage
-    localStorage.setItem("High Score", scoreCurrent);
-    highScore = localStorage.getItem("High Score", scoreCurrent);
+    
+    var highScore = document.querySelector('#high-score');
+    var highScore = localStorage.getItem("High Score", scoreCurrent); 
+
+    if (scoreCurrent >= highScore) {
+        localStorage.setItem("High Score", scoreCurrent);
+        scoreCurrent.innerText = highScore;
+
+    }
+
+
     
 
     // print high score
