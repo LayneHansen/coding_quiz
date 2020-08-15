@@ -68,7 +68,7 @@ start.addEventListener("click", function () {
 
 var quest1 = document.querySelector('.q1-correct');
 quest1.addEventListener('click', function () {
-    scoreCurrent = scoreCurrent + 1;
+    scoreCurrent = scoreCurrent + 2;
     scoreCard.innerText = scoreCurrent;
     removeElement(questionOne);
     showElement(questionTwo);
@@ -94,7 +94,7 @@ for (var i = 0; i < wrongAnswers.length; i++) {
 
 var quest2 = document.querySelector('.q2-correct');
 quest2.addEventListener('click', function () {
-    scoreCurrent = scoreCurrent + 1;
+    scoreCurrent = scoreCurrent + 2;
     scoreCard.innerText = scoreCurrent;
     removeElement(questionTwo);
     showElement(questionThree);
@@ -120,7 +120,7 @@ for (var i = 0; i < wrongAnswers.length; i++) {
 
 var quest3 = document.querySelector('.q3-correct');
 quest3.addEventListener('click', function () {
-    scoreCurrent = scoreCurrent + 1;
+    scoreCurrent = scoreCurrent + 2;
     scoreCard.innerText = scoreCurrent;
     removeElement(questionThree);
     showElement(questionFour);
@@ -146,7 +146,7 @@ for (var i = 0; i < wrongAnswers.length; i++) {
 
 var quest4 = document.querySelector('.q4-correct');
 quest4.addEventListener('click', function () {
-    scoreCurrent = scoreCurrent + 1;
+    scoreCurrent = scoreCurrent + 2;
     scoreCard.innerText = scoreCurrent;
     removeElement(questionFour);
     showElement(questionFive);
@@ -172,7 +172,7 @@ for (var i = 0; i < wrongAnswers.length; i++) {
 
 var quest5 = document.querySelector('.q5-correct');
 quest5.addEventListener('click', function () {
-    scoreCurrent = scoreCurrent + 1;
+    scoreCurrent = scoreCurrent + 2;
     scoreCard.innerText = scoreCurrent;
     removeElement(questionFive);
     showElement(questionSix);
@@ -198,7 +198,7 @@ for (var i = 0; i < wrongAnswers.length; i++) {
 
 var quest6 = document.querySelector('.q6-correct');
 quest6.addEventListener('click', function () {
-    scoreCurrent = scoreCurrent + 1;
+    scoreCurrent = scoreCurrent + 2;
     scoreCard.innerText = scoreCurrent;
     removeElement(questionSix);
     showElement(questionSeven);
@@ -224,7 +224,7 @@ for (var i = 0; i < wrongAnswers.length; i++) {
 
 var quest7 = document.querySelector('.q7-correct');
 quest7.addEventListener('click', function () {
-    scoreCurrent = scoreCurrent + 1;
+    scoreCurrent = scoreCurrent + 2;
     scoreCard.innerText = scoreCurrent;
     removeElement(questionSeven);
     showElement(questionEight);
@@ -249,7 +249,7 @@ for (var i = 0; i < wrongAnswers.length; i++) {
 
 var quest8 = document.querySelector('.q8-correct');
 quest8.addEventListener('click', function () {
-    scoreCurrent = scoreCurrent + 1;
+    scoreCurrent = scoreCurrent + 2;
     scoreCard.innerText = scoreCurrent;
     removeElement(questionEight);
     showElement(questionNine);
@@ -274,7 +274,7 @@ for (var i = 0; i < wrongAnswers.length; i++) {
 
 var quest9 = document.querySelector('.q9-correct');
 quest9.addEventListener('click', function () {
-    scoreCurrent = scoreCurrent + 1;
+    scoreCurrent = scoreCurrent + 2;
     scoreCard.innerText = scoreCurrent;
     removeElement(questionNine);
     showElement(questionTen);
@@ -301,7 +301,7 @@ for (var i = 0; i < wrongAnswers.length; i++) {
 
 var quest10 = document.querySelector('.q10-correct');
 quest10.addEventListener('click', function () {
-    scoreCurrent = scoreCurrent + 1;
+    scoreCurrent = scoreCurrent + 2;
     scoreCard.innerText = scoreCurrent;
     removeElement(questionTen);
     showElement(gameOverCard);
