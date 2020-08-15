@@ -213,10 +213,20 @@
       <div class="card col-md-12" id="title-card">
 
         <div class="card-body bg-secondary" id="high-score-card">
-          <div class="btn-group">
-            <button type="button" class="btn btn-primary bg-secondary">High Score</button>
-            <button type="button" class="btn btn-primary bg-secondary" id="high-score">0</button>
-            <button type="button" class="btn btn-primary bg-secondary">Leader</button>
+            <h3 class="badge badge-secondary">High Score</h3>
+            <h3 class="badge badge-secondary">0</h3>
+            <h3 class="badge badge-secondary">LDH</h3>
+            <form>
+              <div class="form-row align-items-center">
+                <div class="col-auto">
+                  <label class="sr-only" for="inlineFormInput">Name</label>
+                  <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Jane Doe">
+                </div>
+                <div class="col-auto">
+                  <button type="submit" class="btn btn-primary mb-2 bg-secondary" id="submit-button">Submit</button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
 

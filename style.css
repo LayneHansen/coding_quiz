@@ -4,7 +4,6 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 15%;
-
 }
 
 #title-card {
@@ -69,5 +68,13 @@ body {
 
 .badge-pill {
   outline: black solid 2px:
+}
+
+.btn {
+  border: none;
+}
+
+#submit-button {
+  border: white 1px solid;
 }
 
