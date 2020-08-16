@@ -13,6 +13,9 @@ console.log(scoreCard);
 var scoreCurrent = 0;
 
 var highScoreCard = document.querySelector("#high-score-card");
+
+var initialsCard = document.querySelector("#leader");
+
 // console.log(highScore);
 
 // var highScoreCard = document.getElementById()
@@ -294,7 +297,6 @@ for (var i = 0; i < wrongAnswers.length; i++) {
     })
 }
 
-
 // Question 10
 
 var quest10 = document.querySelector('.q10-correct');
@@ -330,8 +332,7 @@ var gameOver = document.querySelector('#game-over');
 
 })
 
-
-
+// Show and Remove Elements
 
 function removeElement(elementToRemove) {
     elementToRemove.style.display = 'none';
@@ -346,6 +347,8 @@ function decreaseTime() {
 }
 
 
+// End of Game Function
+
 function endGame() {
     clearInterval(secondsInterval);
 
@@ -359,13 +362,27 @@ function endGame() {
     
     if (scoreCurrent > highScore) {
         localStorage.setItem("highscore", scoreCurrent);
+        var initials = prompt("You have the high score. Enter your initials.");
+        localStorage.setItem("initials", initials);
+        
+        console.log(initials);
     
-    } // else if (!highScore) localStorage.setItem("highscore", scoreCurrent);
+    }
     
     var localHighScore = localStorage.getItem("highscore");
     highScoreCard.innerText = localHighScore;
+    var highScoreInitials = localStorage.getItem('initials');
+    initialsCard.innerText = highScoreInitials;
     
 }
+
+// function displayInitials () {
+//     var initials = document.querySelector("#submit-button");
+//     initials.addEventListener('click', function () {
+
+//     }
+//     )
+// }
 
 
 // local storage
