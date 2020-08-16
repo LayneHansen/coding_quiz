@@ -1,4 +1,3 @@
-# coding_quiz
 
 ### DO YOU EVEN CODE BRO?!?
 
