@@ -13,6 +13,7 @@ body {
 
 .col {
     border: solid 3px rgb(110, 110, 110);
+    align-content: center;
 }
 
 .card-body {
@@ -57,7 +58,7 @@ body {
     
 }
 
-#game-over-button {
+#game-over {
     align-items: center;
     justify-content: center;
 }
@@ -76,5 +77,9 @@ body {
 
 #submit-button {
   border: white 1px solid;
+}
+
+#high-score-card {
+  color: white;
 }
 

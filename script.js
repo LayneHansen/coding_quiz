@@ -12,7 +12,10 @@ console.log(scoreCard);
 
 var scoreCurrent = 0;
 
-var highScore = document.querySelector(".high-score-card");
+var highScoreCard = document.querySelector("#high-score-card");
+// console.log(highScore);
+
+// var highScoreCard = document.getElementById()
 
 
 
@@ -350,38 +353,38 @@ function endGame() {
         removeElement();
         showElement(gameOverCard);
     }
-
-    // local storage
     
-    let highScore = localStorage.getItem('highscore');
+    let highScore = localStorage.getItem("highscore");
     console.log(highScore);
-
+    
     if (scoreCurrent > highScore) {
         localStorage.setItem("highscore", scoreCurrent);
-
+    
     } // else if (!highScore) localStorage.setItem("highscore", scoreCurrent);
     
-    var localHighScore = localStorage.getItem('highscore')
-    console.log("Is there anybody out there?", localHighScore);
-    highScore.innerText = localHighScore;
-
-    // print high score
-    // user enter initials
-
+    var localHighScore = localStorage.getItem("highscore");
+    highScoreCard.innerText = localHighScore;
+    
 }
 
 
+// local storage
+// function highScoreDisplay () 
 
 
-    // time decreases with wrong answer
+// print high score
+// user enter initials
 
-    // reaches zero, game over
 
-    // all questions answered, game over
+// time decreases with wrong answer
+
+// reaches zero, game over
+
+// all questions answered, game over
 
 // Answer question with click
 
-    // function selectAnswer {
+// function selectAnswer {
 
     // }
 
